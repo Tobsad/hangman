@@ -3,6 +3,9 @@ body{
     background-color: #9195b1;
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
+    background-image: url(https://wallpapercave.com/wp/wp10249661.jpg);
+    background-position: center;
+    background-size: cover;
 }
 input{
     height: 40px;
