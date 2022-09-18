@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hangman.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ladoIzquieredo">
+        <h1>Juego del Ahorcado</h1>
+        <p>Insertar una letra</p>
+        <p id="genero">Animales</p>
+    <input type="text" maxlength="1" id="letra" onkeypress="return soloLetras(event)" ><button class="jugar" id="calcular">Evaluar</button>
+        <p id="letraAdivinada"></p>
+    </div>
+    <div class="ladoDerecho">
+        <div id="ahorcado""></div>
+    </div>
+    
+    <div id="ganador">
+        <h1>Victoria</h1>
+        <p>Felicidades <div id="jugador"></div></p>
+
+        <button class="boton" onClick="window.location.reload();">Jugar denuevo</button>
+        
+    </div>
+    <div id="perdedor">
+        <h1>Fallaste</h1>
+        <p>La palabra era <div id="respuesta"></div></p>
+
+        <button class="boton" onClick="window.location.reload();">Jugar denuevo</button>
+
+        
+    </div>
+    <script src="/game/hangman.js"></script>
+</body>
+</html>
