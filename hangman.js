@@ -1,13 +1,11 @@
 //alert(palabra) muestra la palabra que debemos adivinar
 //Hace que la letra ingresada 
-var jugador = prompt('Ingresa tu nombre')
+var jugador=prompt("Ingresa tu nombre")
 String.prototype.replaceAt=function(index, character) { return this.substring(0, index) + character + this.substring(index+character.length); } 
 
 //Nuestro array de animales
-const palabras=['carpincho', 'perro', 'gato', 'elefante', 'abeja', 'aguila', 'cangrejo', 'gallina',
-'delfin', 'ardilla', 'leon', 'buho', 'loro', 'pato', 'koala', 'tigre', 'cuy', 'gallo', 'piojo', 
-'zancudo', 'venado', 'serpiente', 'buey', 'caballo', 'lagarto', 'camaleon', 'canguro', 'castor', 
-'cerdo', 'burro','cisne' ,'calamar' ,'pulpo' ,'pez', 'alpaca', 'araña','ñandu']
+const palabras=['carpincho', 'gato', 'elefante', 'abeja', 'aguila', 'cangrejo', 'gallina',
+'delfin', 'ardilla','cuy', 'gallo']
 
     //El valor que tomara la palabra a adivinar
     const palabra=palabras[Math.floor(Math.random()*palabras.length)]
@@ -56,7 +54,7 @@ const palabras=['carpincho', 'perro', 'gato', 'elefante', 'abeja', 'aguila', 'ca
             /*Muestra el mensaje que perdiste y ademas te muestra la palabra que debias adivinar */
             document.querySelector('#perdedor').style.display='flex';
             /*Muestra al perder la palabra */
-            document.querySelector('#respuesta').innerHTML =`${palabra}`;
+            document.querySelector('#respuestaa').innerHTML =`${palabra}`;
         } 
     }
     else{
@@ -72,6 +70,10 @@ const palabras=['carpincho', 'perro', 'gato', 'elefante', 'abeja', 'aguila', 'ca
     document.querySelector('#letra').focus();
     
 });
+function mostrarRespuesta(){
+    alert(`La palabra era ${palabra}`)
+    location.reload();
+}
 
 
 

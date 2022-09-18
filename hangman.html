@@ -16,24 +16,25 @@
         <h1>Juego del Ahorcado</h1>
         <p>Insertar una letra</p>
         <p id="genero">Animales</p>
-    <input type="text" maxlength="1" id="letra" onkeypress="return soloLetras(event)" ><button class="jugar" id="calcular">Evaluar</button>
+    <input type="text" maxlength="1" id="letra" onkeypress="return soloLetras(event)" ><button class="jugar" id="calcular">Aceptar</button>
         <p id="letraAdivinada"></p>
     </div>
     <div class="ladoDerecho">
-        <div id="ahorcado""></div>
+        <div id="ahorcado"></div>
+        <button class="jugar" id="respuesta" onclick="mostrarRespuesta()">Mostrar Respuesta y jugar otra vez</button>
     </div>
     
     <div id="ganador">
         <h1>Victoria</h1>
         <p>Felicidades <div id="jugador"></div></p>
-
+        <img src="/game/win.gif" alt="win">
         <button class="boton" onClick="window.location.reload();">Jugar denuevo</button>
         
     </div>
     <div id="perdedor">
         <h1>Fallaste</h1>
-        <p>La palabra era <div id="respuesta"></div></p>
-
+        <p>La palabra era <div id="respuestaa"></div></p>
+        <img src="/game/lose.gif" alt="lose">
         <button class="boton" onClick="window.location.reload();">Jugar denuevo</button>
 
         
